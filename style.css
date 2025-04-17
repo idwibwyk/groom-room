@@ -1,0 +1,356 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family:URW Chancery L, cursive;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.onlzap {
+    text-indent: 110px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox для навигации */
+    justify-content: center; /* Центрирование элементов */
+}
+
+nav li {
+    margin: 0 10px;
+    font-family:URW Chancery L, cursive;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.hero {
+    background-color: #fff;
+    display: flex; /* Flexbox для героя */
+    justify-content: center; /* Центрирование */
+    align-items: center; /* Выравнивание по центру */
+}
+
+.hero-content {
+    display: flex; /* Flexbox для контента героя */
+    align-items: center; /* Выравнивание по центру */
+}
+
+.hero-text {
+    margin-left: 20px; /* Отступ от изображения */
+    text-align: left; /* Текст слева */
+}
+
+.hero img {
+    width: 150px; /* Ограничение ширины изображения */ъ
+    height: 250px;
+    border-radius: 10px;
+}
+
+.hero p {
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+.button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family:URW Chancery L, cursive;
+}
+
+.btn {
+    font-weight: bold;
+    font-family:URW Chancery L, cursive;
+    font-size: 15px;
+    margin-left: -400px;
+}
+
+.btncenter {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight:lighter;
+    font-family:URW Chancery L, cursive;
+    background-color: #333;
+    color: #fff;
+    font-size: 22px;
+    margin-left: 0px;
+    
+}
+
+.btncenter:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.lead {
+    font-size: 18px;
+    margin-left: -400px;
+    font-size: 25px;
+    
+}
+
+.card-img-top {
+    height: 550px;
+    max-width: 400px;
+}
+
+.card2 {
+    height: 600px;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.service {
+    width: 48%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; /* Flexbox для сервиса */
+    justify-content: space-between; /* Распределение элементов по краям */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    margin-right: 20px;
+   
+}
+
+.service ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding: 0;
+    margin-top: 100px;
+    /* margin-bottom: 20px; */ /* Отступ между списком и картинкой (убираем, если нужно) */
+}
+
+.service img {
+    max-width: 200px; /* Ограничение ширины картинки */
+    height: auto;
+    border-radius: 10px;
+}
+
+.price-table { /* Flexbox для таблицы */
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.gallery-grid img {
+    width: 32%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.contact-info {
+    display: flex; /* Flexbox для контактной информации */
+    justify-content: space-around; /* Размещение элементов по краям */
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin: 0; /* Удаление отступов между элементами */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family:URW Chancery L, cursive;
+}
+
+
+.logo {
+    width:120px;
+    height:105px;
+    float: left;
+    padding-top: 25px;
+    padding-top: 0px;
+    margin-top: 0px;
+    
+}
+
+.logo2 {
+    width:120px;
+    height:105px;
+    float: left;
+    padding-top: 25px;
+    padding-top: 0px;
+    margin-top: -40px;
+    
+}
+
+.zapis1 {
+    float: right;
+    margin-left: 25px;
+    margin-bottom: 125px;
+    margin-top: 20px;
+}
+
+.zapis2 {
+    float: right;
+    margin-right: -55px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+
+.about-content {
+    display: flex; /* Flexbox для контента о нас */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    gap: 20px; /* Отступ между картинкой и текстом */
+}
+
+.about-text {
+    padding-top: 65px;
+    font-family:URW Chancery L, cursive;
+}
+
+.about-content img {
+    max-width: 300px; /* Ограничение ширины картинки */
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-content {
+    display: flex; /* Flexbox для контента о нас */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    gap: 20px; /* Отступ между картинкой и текстом */
+}
+
+.about-text {
+    padding-top: 65px;
+    font-family:URW Chancery L, cursive;
+    width: 50%; /* Занимает половину ширины */
+}
+
+.about-content img {
+    max-width: 300px; 
+    height: auto;
+    border-radius: 10px;
+} 
+
+.form-container {
+  width: 50%; /* Занимает половину ширины */
+}
+
+#contact-form { 
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: -430px;
+  margin-bottom: 80px;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+  width: 97%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#contact-form button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.navbar-brand {
+    text-indent: 230px;
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: -10px
+}
+
+.navbar-nav {
+    margin-top: 30px;
+    margin-bottom: -10px
+
+
+}
+
+[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+.mb-0 {
+    margin-bottom: -100px
+}

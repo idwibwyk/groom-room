@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groom Room</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-family: URW Chancery L, cursive;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 10px;
+            font-family: URW Chancery L, cursive;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .hero {
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-text {
+            margin-left: 20px;
+            text-align: left;
+        }
+
+        .hero img {
+            width: 150px;
+            height: 250px;
+            border-radius: 10px;
+        }
+
+        .hero p {
+            margin-bottom: 30px;
+            color: #000000;
+        }
+
+        .button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: URW Chancery L, cursive;
+        }
+
+        .services-grid {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .service {
+            width: 48%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-right: 20px;
+        }
+
+        .service ul {
+            list-style: disc;
+            margin-left: 20px;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .service img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .price-table {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .gallery-grid img {
+            width: 32%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            font-family: URW Chancery L, cursive;
+        }
+
+        .logo {
+            width: 120px;
+            height: 105px;
+            float: left;
+            padding-top: 25px;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .about-text {
+            padding-top: 65px;
+            font-family: URW Chancery L, cursive;
+            width: 50%;
+        }
+
+        .form-container {
+            width: 50%;
+        }
+
+        #contact-form {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: -430px;
+            margin-bottom: 80px;
+        }
+
+        #contact-form input[type="text"],
+        #contact-form input[type="email"],
+        #contact-form textarea {
+            width: 97%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        #contact-form button[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .navbar-brand {
+            text-indent: 230px;
+            font-size: 40px;
+            margin-top: 30px;
+            margin-bottom: -10px;
+        }
+
+        .navbar-nav {
+            margin-top: 30px;
+            margin-bottom: -10px;
+        }
+
+        [type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .mb-0 {
+            margin-bottom: -100px;
+        }
+
+        .alert {
+            display: none; 
+        }
+
+        .about-content img {
+            max-width: 300px; 
+            height: auto;
+            border-radius: 10px;
+        } 
+
+        .logo {
+            width:120px;
+            height:105px;            
+            float: left;
+            padding-top: 25px;
+            padding-top: 0px;
+            margin-top: 0px;            
+        }
+
+        .logo2 {
+            width:120px;
+            height:105px;
+            float: left;            
+            padding-top: 25px;
+            padding-top: 0px;
+            margin-top: -40px;            
+        }
+
+        .service img {
+            max-width: 200px; /* Ограничение ширины картинки */
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="лого.png" class="logo" alt="Логотип салона">
+            <h1>Groom Room</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="price.html">Услуги</a></li>
+                    <li><a href="price.html">Прайс-лист</a></li>
+                    <li><a href="#gallery">Наши работы</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="form.html">Запись на стрижку</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content"> 
+                <img src="приветствие.jpg" alt="Счастливый питомец">
+                <div class="hero-text">
+                    <p>Мы предоставляем полный спектр груминг-услуг для собак и кошек.</p>
+                    <button class="button" data-toggle="modal" data-target="#modal-main">Записаться онлайн</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service">
+                    <h3>Собаки</h3>
+                    <ul>
+                        <li>Полная гигиеническая стрижка</li>
+                        <li>Стрижка когтей</li>
+                        <li>Чистка ушей</li>
+                        <li>Купание</li>
+                    </ul>
+                    <img src="кошка.png" alt="Уход за собакой">
+                </div>
+                <div class="service">
+                    <h3>Кошки</h3>
+                    <ul>
+                        <li>Полная гигиеническая стрижка</li>
+                        <li>Стрижка когтей</li>
+                        <li>Чистка ушей</li>
+                        <li>Купание</li>
+                    </ul>
+                    <img src="собака.png" alt="Уход за кошкой">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="prices">
+        <div class="container">
+            <h2>Прайс-лист</h2>
+            <div class="price-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Услуга</th>
+                            <th>Цена</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Полная гигиеническая стрижка (собака)</td>
+                            <td>от 1400₽</td>
+                        </tr>
+                        <tr>
+                            <td>Полная гигиеническая стрижка (кошка)</td>
+                            <td>от 1200₽</td>
+                        </tr>
+                        <tr>
+                            <td>Стрижка когтей (собака)</td>
+                            <td>200₽</td>
+                        </tr>
+                        <tr>
+                            <td>Стрижка когтей (кошка)</td>
+                            <td>150₽</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="container">
+            <h2>Наши работы</h2>
+            <div class="gallery-grid">
+                <img src="галерея1.jpg" alt="Фото питомца">
+                <img src="галерея2.jpg" alt="Фото питомца">
+                <img src="галерея3.jpg" alt="Фото питомца">
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>О нас</h2>
+            <div class="about-content">
+                <img src="о нас.jpg" alt="Фото салона">
+                <div class="about-text">
+                    Мы развиваем салоны по всей Владимирской области. Наши мастера — <b>профессионалы</b> высокого класса. Они с заботой и любовью оказывают <b>лучшие комплексные услуги</b> для ваших питомцев.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>«Groom Room» — Сеть груминг-салонов во Владимире и Владимирской области. © 2024</p>
+            <div class="contact-info">
+                <p>Адрес: г. Владимир, ул. Дворянская, д. 24</p>
+                <p>Телефон: +79807550339</p>
+            </div>
+        </div>
+    </footer>
+
+<!-- Модальное окно выбора действия -->
+<div class="modal fade" id="modal-main" tabindex="-1" role="dialog" aria-labelledby="modalLabelMain">  <!-- Модальное окно, скрыто по умолчанию, с атрибутами для доступности -->
+    <div class="modal-dialog" role="document">  <!-- Контейнер для содержимого модального окна -->
+        <div class="modal-content">  <!-- Содержимое модального окна -->
+            <div class="modal-header">  <!-- Заголовок модального окна -->
+                <h5 class="modal-title" id="modalLabelMain">Выберите действие</h5>  <!-- Заголовок модального окна -->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">  <!-- Кнопка закрытия модального окна -->
+                    <span aria-hidden="true">×</span>  <!-- Визуальное представление кнопки закрытия -->
+                </button>
+            </div>
+            <div class="modal-body">  <!-- Тело модального окна -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-auth" data-dismiss="modal">Авторизация</button>  <!-- Кнопка открытия модального окна авторизации и закрытия текущего -->
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-register" data-dismiss="modal">Регистрация</button>  <!-- Кнопка открытия модального окна регистрации и закрытия текущего -->
+            </div>
+            <div class="modal-footer">  <!-- Футер модального окна -->
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>  <!-- Кнопка закрытия модального окна -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно авторизации -->
+<div class="modal fade" id="modal-auth" tabindex="-1" role="dialog" aria-labelledby="modalLabelAuth">  <!-- Модальное окно авторизации, скрыто по умолчанию, с атрибутами для доступности -->
+    <div class="modal-dialog" role="document">  <!-- Контейнер для содержимого модального окна -->
+        <div class="modal-content">  <!-- Содержимое модального окна -->
+            <div class="modal-header">  <!-- Заголовок модального окна -->
+                <h5 class="modal-title" id="modalLabelAuth">Авторизация</h5>  <!-- Заголовок модального окна -->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">  <!-- Кнопка закрытия модального окна -->
+                    <span aria-hidden="true">×</span>  <!-- Визуальное представление кнопки закрытия -->
+                </button>
+            </div>
+            <div class="modal-body">  <!-- Тело модального окна -->
+                <!-- Уведомления об ошибках и успехах -->
+                <div class="alert alert-danger" id="auth-error" role="alert"></div>  <!-- Контейнер для отображения сообщений об ошибках -->
+                <div class="alert alert-success" id="auth-success" role="alert"></div>  <!-- Контейнер для отображения сообщений об успехе -->
+                <form id="auth-form">  <!-- Форма авторизации -->
+                    <div class="form-group">  <!-- Группа элементов формы -->
+                        <label for="authEmail">Email</label>  <!-- Метка для поля email -->
+                        <input type="email" class="form-control" id="authEmail" required>  <!-- Поле ввода email, обязательно для заполнения -->
+                    </div>
+                    <div class="form-group">  <!-- Группа элементов формы -->
+                        <label for="authPassword">Пароль</label>  <!-- Метка для поля password -->
+                        <input type="password" class="form-control" id="authPassword" required>  <!-- Поле ввода password, обязательно для заполнения -->
+                    </div>
+                    <button type="submit" class="btn btn-primary">Войти</button>  <!-- Кнопка отправки формы -->
+                </form>
+            </div>
+            <div class="modal-footer">  <!-- Футер модального окна -->
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>  <!-- Кнопка закрытия модального окна -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно регистрации -->
+<div class="modal fade" id="modal-register" tabindex="-1" role="dialog" aria-labelledby="modalLabelRegister">  <!-- Модальное окно регистрации, скрыто по умолчанию, с атрибутами для доступности -->
+    <div class="modal-dialog" role="document">  <!-- Контейнер для содержимого модального окна -->
+        <div class="modal-content">  <!-- Содержимое модального окна -->
+            <div class="modal-header">  <!-- Заголовок модального окна -->
+                <h5 class="modal-title" id="modalLabelRegister">Регистрация</h5>  <!-- Заголовок модального окна -->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">  <!-- Кнопка закрытия модального окна -->
+                    <span aria-hidden="true">×</span>  <!-- Визуальное представление кнопки закрытия -->
+                </button>
+            </div>
+            <div class="modal-body">  <!-- Тело модального окна -->
+                <!-- Уведомление об успешной регистрации -->
+                <div class="alert alert-success" id="register-success" role="alert"></div>  <!-- Контейнер для отображения сообщений об успешной регистрации -->
+                <form id="register-form">  <!-- Форма регистрации -->
+                    <div class="form-group">  <!-- Группа элементов формы -->
+                        <label for="registerEmail">Email</label>  <!-- Метка для поля email -->
+                        <input type="email" class="form-control" id="registerEmail" required>  <!-- Поле ввода email, обязательно для заполнения -->
+                    </div>
+                    <div class="form-group">  <!-- Группа элементов формы -->
+                        <label for="registerPassword">Пароль</label>  <!-- Метка для поля password -->
+                        <input type="password" class="form-control" id="registerPassword" required>  <!-- Поле ввода password, обязательно для заполнения -->
+                    </div>
+                    <button type="submit" class="btn btn-primary">Зарегистрироваться</button>  <!-- Кнопка отправки формы -->
+                </form>
+            </div>
+            <div class="modal-footer">  <!-- Футер модального окна -->
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>  <!-- Кнопка закрытия модального окна -->
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Скрыть уведомления при открытии модальных окон
+            $('#modal-auth').on('show.bs.modal', function() {
+                $('#auth-error').hide(); // Скрыть сообщение об ошибке
+                $('#auth-success').hide(); // Скрыть сообщение об успехе
+            });
+
+            $('#modal-register').on('show.bs.modal', function() {
+                $('#register-success').hide(); // Скрыть сообщение об успехе
+            });
+
+            // Обработка регистрации
+            $('#register-form').on('submit', function(event) {
+                event.preventDefault(); // Предотвращает перезагрузку страницы
+                const email = $('#registerEmail').val(); // Получение email
+                const password = $('#registerPassword').val(); // Получение пароля
+
+                // Сохранение данных в LocalStorage
+                localStorage.setItem(email, password); // Сохранение email и пароля
+                $('#register-success').text('Регистрация прошла успешно!').show(); // Показ успешного сообщения
+                $('#register-form')[0].reset(); // Сброс формы
+            });
+
+            // Обработка авторизации
+            $('#auth-form').on('submit', function(event) {
+                event.preventDefault(); // Предотвращает перезагрузку страницы
+                const email = $('#authEmail').val(); // Получение email
+                const password = $('#authPassword').val(); // Получение пароля
+                const storedPassword = localStorage.getItem(email); // Получение сохраненного пароля
+
+                // Проверка правильности введенных данных
+                if (storedPassword && storedPassword === password) { 
+                    $('#auth-success').text('Авторизация прошла успешно!').show(); // Показ успешного сообщения
+                    $('#auth-error').hide(); // Скрыть сообщение об ошибке
+                } else {
+                    $('#auth-error').text('Неверный email или пароль.').show(); // Показ сообщения об ошибке
+                    $('#auth-success').hide(); // Скрыть успешное сообщение
+                }
+            });
+        });
+    </script>
+</body>
+</html>

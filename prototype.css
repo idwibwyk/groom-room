@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .logo {
+    font-size: 18px;
+    width:120px;
+    height:110px;
+  }
+  
+  .photo {
+    width:130px;
+    height:185px;
+    margin-right: 10px;
+  }
+
+  .menu a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 30px;
+    padding: 20px;
+    margin: 105px;
+  }
+  
+  .content-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .main-title {
+    font-size: 20px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .text-block {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .text-box {
+    width: 30%;
+    background-color:none;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .sub-title {
+    font-size: 18px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .image-gallery {
+    display: flex;
+    margin-right: 30px;
+    justify-content: space-between;
+  }
+  
+  .image-box {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .content-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-section {
+    background-color: #f4f4f4;
+    padding: 10px;
+  }
+  
+  .form-section h3 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-section input,
+  .form-section button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-section button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .text-section {
+    background-color: #f4f4f4;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .text-section h3 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .text-section .text-box {
+    background-color: #e9e9e9;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+  }
+  
+  .contact-info {
+    padding: 10px;
+  }
+  
+  .item {
+    display: flex; 
+    align-items: center;
+    margin-bottom: 20px; 
+  }
+

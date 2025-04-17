@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Groom Room</title>  
+    <link rel="stylesheet" href="style.css">  
+    <style>
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+        /* Стили для примеров jQuery */
+        .example {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .opacity-box {
+            width: 200px;
+            height: 100px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+        }
+        .text-size-box {
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .text-color-box {
+            cursor: pointer;
+            font-size: 1.2em; 
+        }
+        .animated-image {
+            width: 100px;
+            position: relative;
+        }
+        #jquery-examples {
+            margin-top: 30px;
+        }
+        .onlzap {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .typing-text {
+            font-size: 1.2em; 
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Groom Room</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="price.html">Услуги</a></li>
+                    <li><a href="price.html">Прайс-лист</a></li>
+                    <li><a href="#gallery">Наши работы</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="form.html">Запись на стрижку</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="about">
+            <div class="container">
+                <h2 class="onlzap">Онлайн-запись</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p style="margin-left: -150px;">Здесь Вы можете записаться на любую услугу.</p>
+                    </div>
+                    <img src="запись.jpg" class="zapis1" alt="Фото на запись">
+                    <img src="запись2.jpg" class="zapis2" alt="Фото на запись">
+                </div>
+                <div class="form-container" style="margin-left: -150px; margin-top: 20px;">
+                    <form id="contact-form">
+                      <input type="text" id="name" placeholder="Ваше имя">
+                      <input type="email" id="email" placeholder="Ваш email">
+                      <textarea id="message" placeholder="Ваше сообщение"></textarea>
+                      <button type="submit">Отправить</button>
+                    </form>
+                  </div>
+              </div>
+          </section>
+
+        <section id="jquery-examples">
+            <h2>Библиотека jQuery</h2>
+            <div class="example" id="opacity-example">
+                <h3>Изменение прозрачности</h3>
+                <button id="fadeBtn">Скрыть элемент</button>
+                <div class="opacity-box"></div>
+            </div>
+            <div class="example" id="text-size-example">
+                <h3>Анимация увеличения текста</h3>
+                <div class="text-size-box">Увеличение текста</div>
+            </div>
+            <div class="example" id="text-color-example">
+                <h3>Изменение цвета текста по клику</h3>
+                <p class="text-color-box">Изменение цвета</p>
+            </div>
+            <div class="example" id="typing-example">
+                <h3>Эффект печати</h3>
+                <div class="typing-text"></div>
+            </div>
+            <div class="example" id="image-animation-example">
+                <h3>Анимация перемещения изображения</h3>
+                <img src="котик1.jpg" alt="Анимация" class="animated-image">
+                <button id="start-animation-button">Запустить анимацию перемещения</button>
+            </div>
+            <div class="example" id="hover-image-example">
+                <h3>Изменение размера изображения при наведении</h3>
+                <img src="котик1.jpg" alt="Изображение" class="hover-image" >
+            </div>
+        </section>
+
+      </main>
+
+      <footer>
+        <div class="container">
+            <p>«Groom Room» — Сеть груминг-салонов во Владимире и Владимирской области. © 2024</p>
+            <div class="contact-info">
+                <p>Адрес: г. Владимир, ул.Дворянская , д.24</p>
+                <p>Телефон: +79807550339 </p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function() { // Эта функция выполняется после полной загрузки DOM
+            // Изменение прозрачности (с кнопкой)
+            $("#fadeBtn").click(function() { // Обработчик клика по кнопке "Скрыть/Показать элемент"
+                if ($(".opacity-box").is(":visible")) { // Проверяем, видим ли блок
+                    $(".opacity-box").fadeOut(1000); // Плавно скрываем блок за 1 секунду
+                    $(this).text("Показать элемент"); // Меняем текст кнопки
+                } else {
+                    $(".opacity-box").fadeIn(1000); // Плавно показываем блок за 1 секунду
+                    $(this).text("Скрыть элемент"); // Меняем текст кнопки
+                }
+            });
+
+            // Анимация увеличения текста (с setInterval)
+            let fontSize = 10; // Начальный размер шрифта
+            let timer; // Переменная для хранения ID интервала
+            $("#text-size-example .text-size-box").click(function() { // Обработчик клика по элементу с анимацией размера текста
+                clearInterval(timer); // Останавливаем предыдущий интервал, если он существует
+                fontSize = 10; // Сбрасываем размер шрифта
+                let $this = $(this); // Кэшируем jQuery-объект для повышения производительности
+                timer = setInterval(function() { // Запускаем интервал
+                    fontSize += 2; // Увеличиваем размер шрифта
+                    $this.css("fontSize", fontSize + "px"); // Устанавливаем новый размер шрифта
+                    if (fontSize >= 40) { // Проверяем, достигнут ли максимальный размер
+                        clearInterval(timer); // Останавливаем интервал
+                    }
+                }, 50); // Интервал 50 мс
+            });
+
+            // Изменение цвета текста по клику (циклическое)
+            const textColorBox = document.querySelector(".text-color-box"); // Получаем элемент, цвет которого нужно менять
+            const colors = ["red", "blue", "green", "orange", "purple"]; // Массив цветов
+            let currentIndex = 0; // Индекс текущего цвета
+
+            textColorBox.addEventListener("click", function() { // Обработчик клика по элементу
+                textColorBox.style.color = colors[currentIndex]; // Устанавливаем текущий цвет из массива
+                currentIndex = (currentIndex + 1) % colors.length; // Переходим к следующему цвету по кругу
+            });
+
+            // Эффект печати
+            let textToType = "«Groom Room» — Сеть груминг-салонов во Владимире и Владимирской области."; // Текст для эффекта печати
+            let i = 0; // Индекс текущего символа
+            let typingInterval = 100; // Интервал между символами в мс
+            let typingEffect = setInterval(function() { // Запускаем интервал для эффекта печати
+                $(".typing-text").append(textToType.charAt(i)); // Добавляем символ к элементу
+                i++; // Увеличиваем индекс
+                if (i > textToType.length) { // Проверяем, закончился ли текст
+                    clearInterval(typingEffect); // Останавливаем интервал
+                }
+            }, typingInterval); // Интервал 100 мс
+
+            // Анимация перемещения изображения
+            let animationInProgress = false; // Флаг для предотвращения одновременного запуска анимации
+            $("#start-animation-button").click(function(){ // Обработчик клика по кнопке запуска анимации
+                if(!animationInProgress){ // Проверяем, запущена ли анимация
+                    animationInProgress = true; // Устанавливаем флаг
+                    $("#image-animation-example .animated-image").animate({left: '+=200px', top: '+=100px'}, 1000, function(){ // Анимация перемещения
+                        $(this).animate({left: '-=200px', top: '-=100px'}, 1000, function(){ // Возвращение на место
+                            animationInProgress = false; // Сбрасываем флаг
+                        });
+                    });
+                }
+            });
+
+            // Изменение размера изображения при наведении
+            $("#hover-image-example .hover-image").hover( // Обработчик события наведения на изображение
+                function() { // Функция, выполняемая при наведении
+                    $(this).animate({width: '150px'}, 300); // Увеличиваем ширину за 300 мс
+                },
+                function() { // Функция, выполняемая при уходе курсора
+                    $(this).animate({width: '100px'}, 300); // Возвращаем исходную ширину за 300 мс
+                }
+            );
+        });
+    </script>
+</body>
+</html>

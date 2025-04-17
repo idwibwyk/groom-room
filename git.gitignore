@@ -1,0 +1,14 @@
+# Игнорируем node_modules (если используете npm)
+node_modules/
+
+# Игнорируем системные файлы
+.DS_Store
+Thumbs.db
+
+# Игнорируем IDE файлы
+.idea/
+.vscode/
+
+# Игнорируем временные файлы
+*.tmp
+*.log
